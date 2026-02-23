@@ -1,50 +1,46 @@
 # Ensemble_Elegance_Fashion_Recommendation
-A machine learning project using Stacked Generalization to classify Fashion-MNIST images. Ensembles Random Forest, SVM, KNN, and Decision Trees with a Logistic Regression meta-learner to predict fashion trends. Demonstrates superior accuracy over individual models by combining diverse classifier strengths.
 
-# Ensemble Elegance: Fashion Classification using Stacked Generalization
+This project is a deep learning-based recommendation engine designed to provide visually similar fashion suggestions. It utilizes state-of-the-art Convolutional Neural Networks (CNNs) to analyze image features and provide relevant product recommendations from a large dataset of fashion items.
 
-## 📌 Project Overview
-Ensemble Elegance is a Machine Learning project that leverages **Stacked Generalization (Stacking)** to classify images from the Fashion-MNIST dataset. By combining multiple diverse base models (Random Forest, SVM, KNN, Decision Tree), this project demonstrates how ensemble methods can improve predictive performance and model robustness compared to individual classifiers[cite: 13, 14].
+# Ensemble Elegance: Fashion Recommendation System
 
-[cite_start]This project was completed as a **6th Semester Machine Learning dissertation**, emphasizing both technical implementation and strategic business analysis[cite: 1, 3].
+This project explores a novel use of Convolutional Neural Networks (CNNs) for image classification to deliver tailored fashion recommendations. By leveraging CNNs' capabilities, it aims to automatically classify and suggest stylish ensembles, offering significant value in e-commerce and personal styling.
+
+## 🚀 Features
+
+* Visual Similarity Search: Recommends items based on visual characteristics like shape, color, and texture.
+* Deep Feature Extraction: Uses pre-trained models (ResNet50) to transform images into dense vector representations.
+* Content-Based Filtering: Employs K-Nearest Neighbors (KNN) to find the most similar items in the feature space.
+* Interactive Visualizations:** Displays recommended matches alongside their similarity scores.
+
+## 🛠️ Technologies Used
+
+* Language: Python
+* Deep Learning Framework: TensorFlow / Keras
+* Computer Vision: OpenCV, Pillow (PIL), scikit-image
+* Data Analysis: Pandas, NumPy
+* Machine Learning: Scikit-learn (StandardScaler, PCA, NearestNeighbors)
+* Visualization: Matplotlib, Seaborn, Plotly
 
 ## 📂 Dataset
-[cite_start]The project uses the **Fashion-MNIST** dataset, a drop-in replacement for the classic MNIST handwritten digits dataset[cite: 17].
-* **Training Set:** 60,000 images
-* **Test Set:** 10,000 images
-* [cite_start]**Classes:** 10 fashion categories (e.g., T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot)[cite: 18].
-* [cite_start]**Format:** 28x28 grayscale images[cite: 17].
 
-## 🛠️ Tech Stack
-* **Language:** Python
-* [cite_start]**Libraries:** Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn[cite: 20].
-* [cite_start]**Base Models:** Random Forest, Support Vector Machine (SVM), K-Nearest Neighbors (KNN), Decision Tree[cite: 25].
-* [cite_start]**Meta-Learner:** Logistic Regression[cite: 25].
+The system is built using a dataset containing over **44,000 fashion images** labeled with metadata such as gender, category, sub-category, and product type.
 
-## 📊 Methodology (Stacked Generalization)
-1.  [cite_start]**Data Preprocessing:** Images were flattened and normalized (pixel values scaled to 0-1 range)[cite: 21].
-2.  [cite_start]**Base Layer Training:** Four distinct classifiers were trained independently on the training data[cite: 25].
-3.  [cite_start]**Stacking:** The predictions (probabilities) from these base models were used as **new features** to train a final **Meta-Learner** (Logistic Regression).
-4.  [cite_start]**Final Prediction:** The meta-learner makes the final classification based on the combined insights of the base models.
+* CSV Data: `styles.csv` containing product attributes.
+* Image Data: High-resolution images of various fashion products.
 
-## 📈 Results & Performance
-[cite_start]The Stacking Classifier achieved a final accuracy of **89%**, matching the best individual performer (SVM) while offering potentially better generalization[cite: 35].
+## 🏗️ Project Workflow
 
-| Model | Accuracy |
-| :--- | :--- |
-| **Decision Tree** | [cite_start]79% [cite: 34] |
-| **KNN** | [cite_start]86% [cite: 33] |
-| **Random Forest** | [cite_start]88% [cite: 31] |
-| **SVM** | [cite_start]89% [cite: 32] |
-| **Stacking Classifier (Final)** | [cite_start]**89%** [cite: 35] |
+1. Exploratory Data Analysis (EDA): Analyzing product distribution by category, gender, and season using Plotly charts.
+2. Image Preprocessing: Resizing and normalizing images for model compatibility.
+3. Feature Extraction: Leveraging a pre-trained **ResNet50** model to extract high-level visual features.
+4. Similarity Search: Using a `NearestNeighbors` algorithm to calculate the distance between a query image and the database.
+5. Recommendation Engine: A custom function that takes an image path and returns the top "N" similar products.
 
-## 🧠 Learning Outcomes
-Beyond technical execution, this project encompassed a holistic business approach:
-* **Strategic Communication:** Designed an investor-ready pitch deck to present the project's value proposition.
-* **Financial Literacy:** Analyzed cash flow statements and developed financial marketing strategies for a theoretical product launch.
-* **Professional Branding:** Optimized professional portfolios and resumes to align with industry standards.
+## 📊 Visualizations
 
-## 🚀 Installation & Usage
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/yourusername/Ensemble-Elegance-Fashion.git](https://github.com/yourusername/Ensemble-Elegance-Fashion.git)
+The project includes several analytical plots:
+
+* Product Distribution by Season: A circular plot showing seasonal trends.
+* Top Article Types: Horizontal bar charts identifying common items like T-shirts, Shirts, and Casual Shoes.
+* Category Flow: Parallel category diagrams showing the flow between gender, category, and usage.
