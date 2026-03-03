@@ -4,7 +4,7 @@ This project is a deep learning-based recommendation engine designed to provide 
 
 # Ensemble Elegance: Fashion Recommendation System
 
-This project explores a novel use of Convolutional Neural Networks (CNNs) for image classification to deliver tailored fashion recommendations. By leveraging CNNs' capabilities, it aims to automatically classify and suggest stylish ensembles, offering significant value in e-commerce and personal styling.
+Ensemble Elegance is a state-of-the-art fashion recommendation engine designed to bridge the gap between "seeing" and "finding", an end-to-end Fashion Recommendation System leveraging Computer Vision and Deep Learning (Convolutional Neural Network). By integrating ResNet50, VGG16, and MobileNetV2 for high-dimensional feature extraction with K-Nearest Neighbors (KNN) for similarity mapping, the system delivers precise, visually-aligned style suggestions from a dataset of 44,000+ fashion items."
 
 ## 🚀 Features:
 
